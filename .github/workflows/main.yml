@@ -14,7 +14,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: PDF
-          path: FORRT_cv.pdf
+          path: main.pdf
       - name: Get Time
         id: time
         uses: nanzm/get-time-action@v1.1
