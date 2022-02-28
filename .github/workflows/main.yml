@@ -20,7 +20,7 @@ jobs:
         uses: nanzm/get-time-action@v1.1
         with:
           timeZone: -7
-          format: 'YYYY-MM-DD-HH-mm-ss'
+          format: 'YYYYMMDD_HH-mm-ss'
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
@@ -34,6 +34,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./FORRT_cv.pdf
+          asset_path: ./main.pdf
           asset_name:  "FORRT_cv.pdf"
           asset_content_type: application/pdf
