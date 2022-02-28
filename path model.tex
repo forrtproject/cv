@@ -1,0 +1,106 @@
+%\documentclass[convert={density=300,size=1080x800,outext=.png, border=3pt}]{standalone}
+\documentclass[border=3pt]{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage{graphicx, hyperref, tikz}
+\usepackage[hypcap=true,width=\textwidth]{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows,positioning,shapes,shapes.gates.logic.US,trees, backgrounds}
+
+\begin{document}
+\ 
+\begin{tikzpicture}[auto,scale=2,
+	latent/.style={circle,draw,thick,inner sep=0pt,minimum size=20mm, fill=white},
+	error/.style={circle,inner sep=0pt,minimum size=10mm},
+	manifest/.style={rectangle,draw,thick,inner sep=3pt,minimum height=8mm, minimum width=18mm},
+	manifestfront/.style={rectangle,draw,thick,inner sep=0pt,minimum size=12mm, fill=white},
+	ghost/.style={rectangle,draw,thick,inner sep=0pt,minimum size=0mm},	
+	lcorr/.style={<->,>=stealth', bend right=20},
+	rcorr/.style={<->,>=stealth', bend left=20},
+	fcorr/.style={<->,>=stealth', bend left=20},
+	ofcorr/.style={<->,>=stealth', bend right=20},		
+	ofcorr2/.style={<->,>=stealth', bend left=20},		
+	intercept/.style={regular polygon,
+        regular polygon sides=3,draw,thick,inner sep=0pt,minimum size=10mm},
+	mean/.style={regular polygon,regular polygon sides=3,draw,thick,inner sep=0pt,minimum size=10mm},
+	paths/.style={->, thick, >=stealth'},
+	variance/.style={<->, thick, >=stealth', bend left=270},
+	varianceTop/.style={<->, thick, >=stealth', bend right=270, looseness=2},
+	unique/.style={<->, thick, >=stealth', loop above=270, looseness=8},
+	factvar/.style={<->, thick, >=stealth', loop left=270, looseness=8}
+	]
+\tikzset{mystyle/.style={->,double=black}} 
+
+\node [manifest] (P2Effort) {P2Effort};
+\node [manifest] (P2Depress) [below = .2in of P2Effort] {P2Depress};
+\node [manifest] (P2Lonely) [below = .2in of P2Depress] {P2Lonely};
+\node [manifest] (P2Blue) [below = .2in of P2Lonely] {P2Blue};
+\node [manifest] (P2Fearful) [below = .2in of P2Blue] {P2Fearful};
+\node [manifest] (P2Sad) [below = .2in of P2Fearful] {P2Sad};
+\node [manifest] (P2TalkLs) [below = .2in of P2Sad] {P2TalkLs};
+\node [manifest] (P2NotGo) [below = .2in of P2TalkLs] {P2NotGo};
+\node [manifest] (P2Restls) [below = .2in of P2NotGo] {P2Restls};
+\node [manifest] (P2Appetite) [below = .2in of P2Restls] {P2Appetite};
+\node [manifest] (P2KPMind) [below = .2in of P2Appetite] {P2KPMind};
+\node [manifest] (P2Bother) [below = .2in of P2KPMind] {P2Bother};
+\node [latent] (PPWB) [right = 1.0in of P2Sad] {Depression};
+ 
+\node [ghost] (P2ghost) [right = 2.0in of PPWB] {};
+\node [manifest] (Mother's Education) [above = 2.0in of P2ghost] {Mother's Education};
+\node [manifest] (Dentist) [below = 2.0in of P2ghost] {Dentist};
+
+\node [manifest] (Mother's Race) [right = .5in of Mother's Education] {Mother's Race};
+%\node [manifest] (Asian) [right = .5in of Black] {Asian};
+%\node [manifest] (white) [right = .5in of Asian] {white};
+%\node [manifest] (Hispanic) [right = .5in of white] {Hispanic};
+\node [manifest] (Exercise) [right = .75in of Dentist] {Exercise};
+%\node [manifest] () [right = .75in of p2dentis] {p2rapid};
+
+\node [manifest] (SES) [right = .5in of Mother's Race] {SES};
+\node [manifest] (Doctor) [right = .75in of Exercise] {Doctor};
+
+
+\draw [paths] (PPWB) to node[very near end, right] {} (P2Effort.east);
+\draw [paths] (PPWB) to node[very near end, right] {} (P2Depress.east);
+\draw [paths] (PPWB) to node[very near end, right] {} (P2Lonely.east);
+\draw [paths] (PPWB) to node[very near end, right] {} (P2Blue.east);
+\draw [paths] (PPWB) to node[very near end, right] {} (P2Bother.east);
+\draw [paths] (PPWB) to node[near end, above] {} (P2Fearful.east);
+\draw [paths] (PPWB) to node[near end, above] {} (P2Sad.east);
+\draw [paths] (PPWB) to node[near end, above] {} (P2TalkLs.east);
+\draw [paths] (PPWB) to node[near end, above] {} (P2NotGo.east);
+\draw [paths] (PPWB) to node[near end,above] {} (P2Restls.east);
+\draw [paths] (PPWB) to node[near end,above] {} (P2Appetite.east);
+\draw [paths] (PPWB) to node[near end,above] {} (P2KPMind.east);
+
+%EXERCISE
+
+\draw [paths] (Mother's Education) to node[near start, above] {} (Exercise);
+\draw [paths] (Mother's Race) to node[very near end, above] {} (Exercise);
+\draw [paths] (SES) to node[near start] {} (Exercise);
+\draw [paths] (PPWB) to node[near start, above] {} (Exercise);
+
+%DOCTOR
+\draw [paths] (Mother's Education) to node[very near start] {} (Doctor);
+\draw [paths] (SES) to node[very near start] {} (Doctor);
+\draw [paths] (Mother's Race) to node[very near end, above] {} (Doctor);
+\draw [paths] (PPWB) to node[very near start, above] {} (Doctor);
+
+%DENTIST
+\draw [paths] (PPWB) to node[very near end, above] {} (Dentist);
+\draw [paths] (SES) to node[very near end, above] {} (Dentist);
+\draw [paths] (Mother's Race) to node[very near end, above] {} (Dentist);
+\draw [paths] (PPWB) to node[very near start, above] {} (Dentist);
+\draw [paths] (Mother's Education) to node[very near end, above] {} (Dentist);
+
+\draw [lcorr] (Dentist) to node[below] {} (Exercise);
+\draw [lcorr] (Exercise) to node[below] {} (Doctor);
+\draw [lcorr] (Dentist) to node[below] {} (Doctor);
+
+
+\end{tikzpicture}
+\end{document}

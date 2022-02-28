@@ -1,0 +1,487 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\documentclass[letterpaper]{article}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[super]{nth}
+\usepackage[dvipsnames]{xcolor}
+
+% Comment the following lines to use the default Computer Modern font
+% instead of the Palatino font provided by the mathpazo package.
+% Remove the 'osf' bit if you don't like the old style figures.
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\graphicspath{ {./images/} }
+
+% Set your name here
+\def\name{Framework for Open \& Reproducible Research Training}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+  pdfkeywords = {education},
+  pdftitle = {\name: CV},
+  pdfsubject = {CV},
+  pdfpagemode = UseNone
+}
+
+\newcommand{\MYhref}[3][Gray]{\href{#2}{\color{#1}{#3}}}%
+\newcommand{\MYlink}[3][Red]{\href{#2}{\color{#1}{#3}}}%
+
+\geometry{
+  body={6.5in, 9.0in},
+  left=1.00in,
+  top=1.00in
+}
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+%\renewenvironment{itemize}{
+ % \begin{list}{}{
+  %  \setlength{\leftmargin}{1.5em}
+%  }
+%}{
+%  \end{list}
+%}
+
+\begin{document}
+
+% Place name at left
+\centerline{\fontfamily{pag}\selectfont\huge \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=100]{FORRT.png}
+\end{figure}
+
+
+\begin{center}
+    \large \color{Gray}
+%\hspace{-1.5em}Duke University, 300 Fuller Street, Durham, NC 27701 | (405) 823-4589
+\vspace{-0.5em}
+\item
+\hspace{-1.5em} \MYhref{mailto:info@forrt.org}{info@forrt.org} | \MYhref{https://forrt.org/}{forrt.org}
+\end{center}
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown}Research Interests}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+
+\begin{itemize}
+\item Integrating open and reproducible principles into higher education
+\item Meta-science, team-science \& citizen-science
+\item Open educational resources \& quality pedagogical tools
+\item Curricular reform, epistemological uncertainty and diversity, methods of education
+\item Academic incentive structure 
+\end{itemize}
+
+
+
+
+\\~\\
+
+
+
+
+\section*{\color{Brown} Awards}
+\vspace{-0.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+
+\item[]{\noindent{{Commendation} by the \href{https://hidden-ref.org/about/}{\color{BlueViolet}HiddenREF} to FORRT  | \href{https://youtu.be/btjRNG0NANg?t=1070}{\it \color{BlueViolet} Announcement} \hfill{\em 2021} \\ for FORRT's {\href{https://forrt.org/nexus}{\color{BlueViolet} \itEducational Educational Nexus}}.}} 
+
+
+\item[]{\noindent{Open Scholarship Award} | \nth{2} place | by Open Scholarship Community Galway  \hfill{\em 2021} \\ for the initiative ``{\href{http://forrt.org/}{\color{BlueViolet} \it Framework for Open and Reproducible Research Training (FORRT)}}" \hfill{\em{}}
+}
+
+\item[]{\noindent{Commendation} by the \href{http://improvingpsych.org/mission/awards/}{\color{BlueViolet}Society for the Improvement of Psychological Science} \hfill{\em 2020} \\ for the manuscript ``{\href{https://osf.io/bnh7p}{\color{BlueViolet} \it Introducing a Framework for Open and Reproducible Research Training (FORRT)}}"}
+
+%\vspace{0.25em}
+\end{itemize}
+
+
+
+\\~\\
+
+
+
+
+\section*{\color{Brown}Peer-Reviewed Publications}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{enumerate}
+
+
+\item[]{\noindent Parsons, S., {Azevedo, F.}, Elsherif, M. M., Guay, S., ... \& Aczel, B. (2022) A Community-Sourced Glossary of Open Scholarship Terms. \it{Nature Human Behaviour}.} {\color{BlueViolet}{\href{https://doi.org/10.1038/s41562-021-01269-4}{\color{BlueViolet}{10.1038/s41562-021-01269-4}}}}
+
+\item[]{\noindent Pownall, M., {Azevedo, F.},  Aldoh, A., Elsherif, M. M.,  Vasilev, M., Pennington, C.R., ... \& Parsons, S. (2021). Embedding open and reproducible science into teaching: A bank of lesson plans and resources. \it{Scholarship of Teaching and Learning in Psychology}. {\color{BlueViolet}{\href{https://doi.org/10.1037/stl0000307}{\color{BlueViolet}{10.1037/stl0000307}}}}}
+
+
+
+
+\vspace{0.25em}
+
+\end{enumerate}
+
+
+\section*{\color{Brown}Submitted Publications \& Preprints}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+\vspace{0.25em}
+
+\item[]{\noindent {Azevedo, F.}, Parsons, S., Micheli, L., Strand, J., Rinke, E., ... \& FORRT (2019, December 13). Introducing a Framework for Open and Reproducible Research Training (FORRT). \\                               \href{https://doi.org/10.31219/osf.io/bnh7p}{\color{BlueViolet}https://doi.org/10.31219/osf.io/bnh7p} {\color{BlueViolet}{[\href{https://osf.io/g29eu/}{\color{BlueViolet}{Supplementary Materials}}]}}}
+
+
+\item[]{\noindent Azevedo, F., Liu, M., Pennington, C. R., Pownall, M., Evans, T. R., Parsons, S., … F. (2021, November 23). Towards a culture of open scholarship: The role of pedagogical communities. https://doi.org/10.31222/osf.io/ek9m5}
+
+
+\end{itemize}
+
+
+\section*{\color{Brown} Policy}
+\vspace{-0.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+\vspace{0.25em}
+
+\item[]{\noindent {Azevedo, F.}, Liu, M., Pennington, C. R., Pownall, M., Evans, T. R., Parsons, S., Elsherif, M. M., Micheli, L., Moreau, D., \& FORRT. (2021). {\it Towards a culture of open scholarship: The role of pedagogical communities.} (Report No. RRE0080). Written evidence on reproducibility and research integrity. UK Parliament. \href{https://committees.parliament.uk/writtenevidence/39751/html/}{\color{BlueViolet}https://committees.parliament.uk/writtenevidence/39751/html/} {\color{BlueViolet}{[\href{https://committees.parliament.uk/writtenevidence/39751/pdf/}{\color{BlueViolet}{PDF}}]}} {\color{BlueViolet}{[\href{https://committees.parliament.uk/work/1433/reproducibility-and-research-integrity/publications/written-evidence/?SearchTerm=FORRT&DateFrom=&DateTo=&SessionId=}{\color{BlueViolet}{UK Parliament Publication}}]}}}
+
+\item[]{\noindent {Parsons, S}, Azevedo, F. \& FORRT (2020). {\it Briefing note for degree accrediting societies}. Submitted to UK’s Reproducibility Network \& British Psychological Society  {\color{BlueViolet}{[\href{https://forrt.org/publications/Parsons_Azevedo_FORRT_UKRN_Briefing_note_for_degree_accrediting_societies.pdf}{\color{BlueViolet}{Briefing Note}}]}}}
+
+
+\end{itemize}
+
+
+
+
+
+
+\section*{\color{Brown}Manuscripts in Preparation}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+\vspace{0.25em}
+
+\item[]{\noindent Azevedo, F., Liu, M., Pennington, C., Pownall, M.,  Parsons, S., ... \& FORRT (2021). Towards a culture of open scholarship practices: The role of grassroots pedagogical communities.} 
+
+\item[]{\noindent Pownall, M., Azevedo, F., Pennington, C., Parsons, S., ... \& FORRT (2021). How do teaching and mentoring through open and reproducible scholarship change students' attitudes towards science and academia and their role in these?}
+
+\item[]{\noindent Kalandadze, T., Elsherif, M. M.,  Micheli, L., Azevedo, F., Parsons, S., ... \& FORRT (2021). Integrating Open and Reproducible Scholarship into Teaching and Mentoring: Introducing community-sourced Summaries of Open Scholarship literature}
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown}Editorials \& op-eds}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+\vspace{0.25em}
+
+\item[]{\noindent Leech, G. (2021). Reversals in psychology. Behavioural and Social Sciences at Nature Portfolio. \href{https://go.nature.com/3mgFgFF}{\color{BlueViolet}https://go.nature.com/3mgFgFF}}
+ 
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown} Public Scholarship}
+\vspace{-0.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+
+\item[]{\noindent {Azevedo, F., Vasilev, M., Micheli, L., Barlett, J., Quinn, K., Kalandadze, T., McCuaig, J. \& Parsons, P. (2021). Getting Started with FORRT. The Framework for Open \& Reproducible Research Training.}} \href{https://docs.google.com/document/d/17ECRs6J8spO3CU6siheGL8weQ-TzdyAUpXIiIE8cUeI/edit#}{\color{BlueViolet}Google Docs link.}
+
+\item[]{\noindent {Elsherif, M. M.}, Kalandadze, T., Micheli, L., Vasilev, M., Miranda, J., Marques, T., Plomp, E., Rees, A., Oliveira, C., Parsons, S., ... \& Azevedo, F. (2021). Summaries of Open and Reproducible Science Literature. The Framework for Open \& Reproducible Research Training.} \href{https://forrt.org/summaries}{\color{BlueViolet}https://forrt.org/summaries}
+
+\item[]{\noindent {Galang, C.M. & Elsherif, M. M.M., Guay, S., ... FORRT. (2021). Curated Resources. The Framework for Open \& Reproducible Research Training.} \href{https://forrt.org/resources}{\color{BlueViolet}https://forrt.org/resources}}
+
+\item[]{\noindent {Forscher, P.} (2021). Teaching the why and how of replication studies. \emph{FORRT's Educational Nexus.}} \\ \href{https://forrt.org/educators-corner/004-teaching-why-how-replication/}{\color{BlueViolet}https://forrt.org/educators-corner/004-teaching-why-how-replication/}
+
+\item[]{\noindent Micheli, L., Vasilev, M., C., Parsons, S., ... \& Azevedo, F. (2021). Adopting Principled Education: Implementing fairer teaching and mentoring practices. The Framework for Open \& Reproducible Research Training.} \\ \href{https://forrt.org/forrt/adopting/}{\color{BlueViolet}https://forrt.org/forrt/adopting/}
+
+\item[]{\noindent {Pownall, M., Azevedo, F.,  Aldoh, A., Elsherif, M. M.,  Vasilev, M., Pennington, C.R., ... Parsons, S. (2021). Lesson Plans. \emph{FORRT's Educational Nexus.}}} \href{https://forrt.org/lesson-plans/}{\color{BlueViolet}https://forrt.org/lesson-plans/}
+
+\item[]{\noindent {Renbarger, R.}, Stegenga, S., L\"{o}sch, T., Karcher, S., \& Steltenpohl, C. (2021). Qualitative Open Science Practices. What does this look like in education? \emph{FORRT's Educational Nexus.}} \\ \href{https://forrt.org/educators-corner/006-qualitative-os-practices/}{\color{BlueViolet}https://forrt.org/educators-corner/006-qualitative-os-practices/}
+
+
+%\vspace{0.25em}
+\end{itemize}
+
+
+
+
+
+
+
+
+\section*{\color{Brown} Editorial Experience}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+
+\item[]{\noindent {{\it Editor} for FORRT's \href{https://forrt.org/educators-corner}{{\color{BlueViolet}Educational Corner}}  \hfill {\em 2018-21} }}
+
+\item[]{\noindent {{\it Reviewer} for FORRT's \href{https://forrt.org/educators-corner}{{\color{BlueViolet}Educational Corner}} \hfill {\em 2019} }}
+
+\item[]{\noindent {{\it Editor} for FORRT's \href{https://forrt.org/pedagogies/}{{\color{BlueViolet}Pedagogies}}  \hfill {\em 2020} }}
+
+\item[]{\noindent {{\it Reviewer} for FORRT's \href{https://forrt.org/glossary}{{\color{BlueViolet}Glossary}}  \hfill {\em 2021} }}
+
+\item[]{\noindent {{\it Editor} for FORRT's \href{https://forrt.org/summaries}{{\color{BlueViolet}Summaries of Open and Reproducible Science Literature}}  \hfill {\em 2020-21} }}
+
+\item[]{\noindent {{\it Reviewer} for FORRT's \href{https://forrt.org/summaries}{{\color{BlueViolet}Summaries of Open and Reproducible Science Literature}}  \hfill {\em 2020-21} }}
+
+
+\end{itemize}
+
+
+
+
+
+
+
+\section*{\color{Brown} Workshops and Invited Talks}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+
+
+\item[] {\noindent {Azevedo, F.}, Micheli, L., Oliveira, C, \& Parsons, S. (April 2021). Building a community from open scholarship pedagogy with a Framework for Open and Reproducible Research Training (FORRT).  \href{https://www.projecttier.org/fellowships-and-workshops/2021-spring-symposium/}{\color{BlueViolet}At ProjectTier's 2021 Spring Symposium.}}
+
+Miranda, J.F. \& Elsherif, M.M. (February 2021). Creating a glossary of open and reproducible science terms: easing in newcomers to key concepts. Talk presented at the Virtual Unconference on Open Scholarship Practices in Education Research.
+
+Hartmann, H., Liu, M., Elsherif, M., Aldoh, A., Alzahawi, S., & Azevedo, F. (2021). Replications and Reversals in Social Science. Association for Interdisciplinary Meta-research and Open Science, 30th November-2th December.
+
+Elsherif, M.M. (2022). What happens if we don’t incorporate open science & reproducibility into research training?. Talk presented at Reproducibilitea Leicester, University of Leicester, 13th January.
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown} National and International Presentations}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+
+\item[] {\noindent {Azevedo, F.}, Micheli, L., Oliveira, C, \& Parsons, S. (April 2021). Building a community from open scholarship pedagogy with a Framework for Open and Reproducible Research Training (FORRT). At Open Science and Replicability in the Behavioural and Social Sciences. Chemnitz, Germany.}
+
+Elsherif, M.M. (2022). A Community-Sourced Glossary of Open Scholarship Terms. Talk presented at Reproducibilitea Leicester, University of Leicester, 27th January.
+
+Miranda, J.F., Elsherif, M. M.M., Parsons, S., \& Azevedo, F. Creating a glossary of open and reproducible science terms: easing in newcomers to key concepts. Talk presented at the Virtual Unconference on Open Scholarship Practices in Education Research, 08-09 February.
+
+\item[] {\noindent Pownall, M., Robertson, O., Aldoh, A., Azevedo, F., Elsherif, M. M.,  Vasilev, \& Parsons, S. (2021). Developing resources to support teaching faculty and integrate open scholarship content into curricula. At Society for the Improvement of Psychological Science.} \href{https://osf.io/8eavj/}{\color{BlueViolet}https://osf.io/8eavj/}
+
+\item[] {\noindent Liu, M., Hartmann, H., Elsherif, M.M.,  & Azevedo, F. (2021). Replications and Reversals in Social Science.  Psychological Science Accelerator, 28-30th October.}
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown} Public Outreach}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+
+\item[] {\noindent {Keating, C. (May 2021). Introduction to FORRT. \href{https://youtu.be/XlL54egjSoA}{\color{BlueViolet}YouTube Video.}}}
+
+\item[] {\noindent {Micheli, L., Haushofer, J. (May 2021). Remote Student Exchange. \href{https://youtu.be/5kyjnPFSmog}{\color{BlueViolet}YouTube Video.}}}
+
+\item[] {\noindent {Strand, J. (December 2020). FORRT's Pedagogy: Julia Strand. \href{https://youtu.be/vi1BxZ1MIaE}{\color{BlueViolet}YouTube Video.}}} \href{https://osf.io/zpb8a/}{\color{BlueViolet}OSF Repository.}
+
+
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown}Service \& Positions of Responsability}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+
+\textbf{Academic Community}
+
+\begin{itemize}
+\item[]{\noindent {{\it Steering Committee} of FORRT's \href{https://forrt.org/about/community/#teams}{{\color{BlueViolet}Team Ethics}}}} \hfill {\em 2021} \\
+with Kimberly Quinn, Sam Parsons \& Leticia Micheli.
+
+\item[]{\noindent {{\it Community Manager} for FORRT's \href{https://forrt.org/about/community/#people}{{\color{BlueViolet}Slack}}}} \hfill {\em 2021} \\
+with Flavio Azevedo, Sam Parsons, Helena Hartmann, \& Leticia Micheli.
+
+\item[]{\noindent {{\it Social Media Manager}}} \hfill {\em 2021} \\
+with Kelly Lloyd, Connor Keating, \& Catherine Laverty.
+
+\item[]{\noindent {{\it Programmer, IT-Manager \& Website Designer}}} FORRT's \href{https://forrt.org}{{\color{BlueViolet}Website}} \& \href{https://github.com/forrtproject/forrtproject.github.io}{{\color{BlueViolet}GitHub}} \hfill {\em 2021} \\
+with Samuel Guay, Flavio Azevedo \& Alexander Hart.
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown}Grants}
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+\begin{center}
+    \large \color{Gray}
+%\hspace{-1.5em}Duke University, 300 Fuller Street, Durham, NC 27701 | (405) 823-4589
+\vspace{-0.5em}
+\item
+\hspace{-1.5em}forthcoming
+\end{center}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{\color{Brown}Institutional Partnerships}
+
+
+\vspace{-.5em}
+\hrule
+\vspace{1em}
+\begin{itemize}
+\begin{center}
+    \large \color{Gray}
+
+
+
+\centering
+\includegraphics[width=85]{UKRN.png}
+\includegraphics[width=100]{ProjectTier.png}
+\includegraphics[width=120]{RN_German.png}
+
+
+\end{center}
+\end{itemize}
+
+
+
+\bigskip
+
+% Footer
+\begin{center}
+  \begin{footnotesize}
+    Last updated: \today \\
+  \end{footnotesize}
+\end{center}
+
+\end{document}
