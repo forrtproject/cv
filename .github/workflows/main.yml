@@ -26,7 +26,7 @@ jobs:
       - name: Create PR to website repo
         uses: paygoc6/action-pull-request-another-repo@v1.0.1
         env:
-          API_TOKEN_GITHUB: ${{ secrets.FORRT }}
+          API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
         with:
           source_folder: 'FORRT_cv.pdf'
           destination_repo: 'forrtproject/forrtproject.github.io'
@@ -36,4 +36,3 @@ jobs:
           user_email: '<>'
           user_name: 'github-actions[bot]'
           pull_request_reviewers: 'SamGuay'
-          pr_title: '[CV] Update made on $DATE'
