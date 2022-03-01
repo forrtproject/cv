@@ -4,36 +4,21 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: main.tex
-      - name: Uploading artifact
-        uses: actions/upload-artifact@v2
+      - name: Commit files
+        run: |
+          mv main.pdf FORRT_cv.pdf
+          DATE=$(date +'%Y-%m-%d %H:%M')
+          git config --local user.email "<>"
+          git config --local user.name "github-actions[bot]"
+          git add FORRT_cv.pdf
+          git commit -m "Build CV on $DATE"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          name: PDF
-          path: main.pdf
-      - name: Get Time
-        id: time
-        uses: nanzm/get-time-action@v1.1
-        with:
-          timeZone: -7
-          format: 'YYYYMMDD_HH-mm-ss'
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          name: CV compiled on ${{ steps.time.outputs.time }}
-          tag_name: ${{ steps.time.outputs.time }}
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./main.pdf
-          asset_name:  "FORRT_cv.pdf"
-          asset_content_type: application/pdf
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
