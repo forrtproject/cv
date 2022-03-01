@@ -1,5 +1,6 @@
 name: Compile LaTeX doc to forrt_cv.pdf
 on: [push]
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -22,3 +23,17 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+      - name: Create PR to website repo
+        uses: paygoc6/action-pull-request-another-repo@v1.0.1
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.FORRT }}
+        with:
+          source_folder: 'FORRT_cv.pdf'
+          destination_repo: 'forrtproject/forrtproject.github.io'
+          destination_folder: 'static/files/'
+          destination_base_branch: 'main'
+          destination_head_branch: 'CV'
+          user_email: '<>'
+          user_name: 'github-actions[bot]'
+          pull_request_reviewers: 'SamGuay'
+          pr_title: '[CV] Update made on $DATE'
