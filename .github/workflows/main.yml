@@ -1,5 +1,5 @@
 name: Compile LaTeX doc to forrt_cv.pdf
-on: [push]
+on: workflow_dispatch
 
 jobs:
   build_latex:
@@ -9,10 +9,9 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
+          root_file: FORRT_cv.tex
       - name: Commit files
         run: |
-          mv main.pdf FORRT_cv.pdf
           DATE=$(date +'%Y-%m-%d %H:%M')
           git config --local user.email "<>"
           git config --local user.name "github-actions[bot]"
@@ -32,6 +31,6 @@ jobs:
           destination_repo: 'forrtproject/forrtproject.github.io'
           destination_folder: 'static/files/'
           destination_branch: 'master'
-          user_email: 'samuel.guay@umontreal.ca'
-          user_name: 'SamGuay'
-          commit_message: 'Update cv'
+          user_email: 'rivaquiroga@gmail.com'
+          user_name: 'rivaquiroga'
+          commit_message: 'Update FORRT CV'
