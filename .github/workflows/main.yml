@@ -32,6 +32,6 @@ jobs:
           destination_folder: 'static/files/'
           destination_branch: 'master'
           destination_branch_create: 'update-cv'
-          user_email: 'rivaquiroga@gmail.com'
+          user_email: 'riva.quiroga@uc.cl'
           user_name: 'rivaquiroga'
           commit_message: 'Update FORRT CV'
