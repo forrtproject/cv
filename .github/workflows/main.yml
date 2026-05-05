@@ -30,7 +30,7 @@ jobs:
           source_file: 'FORRT_cv.pdf'
           destination_repo: 'forrtproject/forrtproject.github.io'
           destination_folder: 'static/files/'
-          destination_branch: 'update-cv'
+          destination_branch: 'master'
           destination_branch_create: 'update-cv'
           user_email: 'rivaquiroga@gmail.com'
           user_name: 'rivaquiroga'
